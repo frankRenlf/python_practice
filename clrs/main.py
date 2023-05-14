@@ -9,7 +9,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution
-    ret = sol.rearrangeBarcodes([1, 1, 1, 1, 2, 2, 3, 3])
+    ret = sol.rearrangeBarcodes(sol,[1, 1, 1, 1, 2, 2, 3, 3])
     print(ret)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
