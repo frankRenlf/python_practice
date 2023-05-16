@@ -16,7 +16,7 @@ class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         if (n := len(jobDifficulty)) < d:
             return -1
-        
+
         def dfs(left, remain):
             if remain == 1:
                 return max(jobDifficulty[left:])
