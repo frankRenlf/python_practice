@@ -1,4 +1,4 @@
-from leetcode.T1072 import Solution
+from leetcode.T1335 import Solution
 
 
 def print_hi(name):
@@ -9,7 +9,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution
-    ret = sol.maxEqualRowsAfterFlips(sol, [[1, 0, 0], [1, 0, 1], [1, 1, 0]])
+    ret = sol.minDifficulty(sol, [6, 5, 4, 3, 2, 1], 2)
     print(ret)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
