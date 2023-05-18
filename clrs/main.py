@@ -8,14 +8,10 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    sol = Solution
-    ret = sol.addNegabinary(sol, [1], [1])
+    sol = Solution()
+    ret = sol.addNegabinary([1], [1])
     print(ret)
     a = -1
     while a:
         print(a)
         a += 1
-
-
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
