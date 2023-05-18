@@ -1,4 +1,4 @@
-from leetcode.T1335 import Solution
+from leetcode.T1073 import Solution
 
 
 def print_hi(name):
@@ -9,7 +9,13 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution
-    ret = sol.minDifficulty(sol, [6, 5, 4, 3, 2, 1], 2)
+    ret = sol.addNegabinary(sol, [1], [1])
     print(ret)
+    a = -1
+    while a:
+        print(a)
+        a += 1
+
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
