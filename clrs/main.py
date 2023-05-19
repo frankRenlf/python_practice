@@ -1,4 +1,4 @@
-from leetcode.T1073 import Solution
+from leetcode.T1079 import Solution
 
 
 def print_hi(name):
@@ -9,9 +9,6 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution()
-    ret = sol.addNegabinary([1], [1])
+    ret = sol.numTilePossibilities("AAB")
     print(ret)
-    a = -1
-    while a:
-        print(a)
-        a += 1
+
