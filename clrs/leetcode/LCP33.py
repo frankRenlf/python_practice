@@ -6,7 +6,7 @@
     @createTime : 2023/5/21 08:04 
     @Email : sc19lr@leeds.ac.uk
     @github : https://github.com/frankRenlf
-    @Description :
+    @Description : easy
 """
 from typing import List
 
@@ -15,7 +15,7 @@ class Solution:
     def storeWater(self, bucket: List[int], vat: List[int]) -> int:
         n = len(bucket)
         cnt = max(vat)
-        res = int('inf')
+        res = float('inf')
         if cnt == 0:
             return 0
         for i in range(1, cnt + 1):
