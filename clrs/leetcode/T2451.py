@@ -9,7 +9,21 @@
     @Description : easy
 """
 from typing import List
+from collections import Counter
 
 
 class Solution:
     def oddString(self, words: List[str]) -> str:
+        m = len(words)
+        n = len(words[0])
+        map = Counter()
+        for i in range(m):
+            arr = list()
+            for j in range(n - 1):
+                arr.append(ord(words[i][j + 1]) - ord(words[i][j]))
+            s = arr.__str__()
+            if map[s] > 0:
+                map[s] = -1
+            elif map[s] == 0:
+                map[s] = i + 1
+        return words[max(map.values()) - 1]

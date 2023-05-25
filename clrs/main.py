@@ -1,4 +1,4 @@
-from leetcode.T1079 import Solution
+from leetcode.T2451 import Solution
 
 
 def print_hi(name):
@@ -9,5 +9,5 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution()
-    ret = sol.numTilePossibilities("AAB")
+    ret = sol.oddString(["az","za","az"])
     print(ret)
