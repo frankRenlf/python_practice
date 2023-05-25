@@ -9,5 +9,5 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution()
-    ret = sol.oddString(["az","za","az"])
+    ret = sol.oddString(["az", "za", "az"])
     print(ret)
