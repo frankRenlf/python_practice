@@ -18,6 +18,7 @@ class Solution:
 
     def __init__(self):
         self.res = sys.maxsize
+        self.cnt = 0
 
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         self.find_path(grid, 0, 0, len(grid), 1)
@@ -25,6 +26,7 @@ class Solution:
 
     def find_path(self, grid, i, j, n, length):
         if self.check(grid, i, j, n):
+            self.cnt += 1
             if i == n - 1 and j == n - 1:
                 self.res = min(self.res, length)
             else:

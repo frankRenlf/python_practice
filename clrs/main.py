@@ -17,7 +17,7 @@ if __name__ == '__main__':
     ret = sol.shortestPathBinaryMatrix(
         [[0, 0, 1, 1, 0, 0], [0, 0, 0, 0, 1, 1], [1, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0],
          [0, 0, 1, 0, 0, 0]])
-    print(ret)
+    print(sol.cnt)
     # st = Sorts()
     # arr = [7, 2, 1, 3, 11, 2, 10, 4, 5, 19]
     # st.quick(arr)
