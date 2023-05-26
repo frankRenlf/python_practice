@@ -1,4 +1,4 @@
-from leetcode.T2451 import Solution
+from leetcode.T1091 import Solution
 from algorithms.sort import Sorts
 
 
@@ -13,10 +13,12 @@ def test(arr):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # sol = Solution()
-    # ret = sol.oddString(["az", "za", "az"])
-    # print(ret)
-    st = Sorts()
-    arr = [7, 2, 1, 3, 11, 2, 10, 4, 5, 19]
-    st.quick(arr)
-    print(arr)
+    sol = Solution()
+    ret = sol.shortestPathBinaryMatrix(
+        [[0, 0, 1, 1, 0, 0], [0, 0, 0, 0, 1, 1], [1, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0],
+         [0, 0, 1, 0, 0, 0]])
+    print(ret)
+    # st = Sorts()
+    # arr = [7, 2, 1, 3, 11, 2, 10, 4, 5, 19]
+    # st.quick(arr)
+    # print(arr)
