@@ -13,4 +13,10 @@ from typing import List
 
 class Solution:
     def averageValue(self, nums: List[int]) -> int:
-       
+        sum_val = 0
+        cnt = 0
+        for i in nums:
+            if i % 6 == 0:
+                sum_val += i
+                cnt += 1
+        return sum_val // cnt if cnt > 0 else 0
