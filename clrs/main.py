@@ -1,5 +1,6 @@
 from leetcode.T2352 import Solution
 from algorithms.sort import Sorts
+import numpy as np
 
 
 def print_hi(name):
@@ -16,8 +17,9 @@ if __name__ == '__main__':
     sol = Solution()
     ret = sol.equalPairs([[3, 1, 2, 2], [1, 4, 4, 5], [2, 4, 2, 2], [2, 4, 2, 2]])
     print(ret)
-    arr = [1,2,3,4,5]
-    print((x for x in arr), [x for x in arr])
+    arr = [1, 2]
+    ret = np.linalg.norm(arr)
+    print(ret, ret ** 2)
     # st = Sorts()
     # arr = [7, 2, 1, 3, 11, 2, 10, 4, 5, 19]
     # st.quick(arr)
