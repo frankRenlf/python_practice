@@ -15,11 +15,12 @@ def test(arr):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     sol = Solution()
-    ret = sol.equalPairs([[3, 1, 2, 2], [1, 4, 4, 5], [2, 4, 2, 2], [2, 4, 2, 2]])
+    arr1 = [[3, 1, 2, 2], [1, 4, 4, 5], [2, 4, 2, 2], [2, 4, 2, 2]]
+    ret = sol.equalPairs(arr1)
     print(ret)
     arr = [1, 2]
     ret = np.linalg.norm(arr)
-    print(ret, ret ** 2)
+    print(arr1[1:])
     # st = Sorts()
     # arr = [7, 2, 1, 3, 11, 2, 10, 4, 5, 19]
     # st.quick(arr)
