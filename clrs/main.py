@@ -23,7 +23,13 @@ if __name__ == '__main__':
     # Take the first K examples as centroids
     centroids = arr1[randidx[:2]]
     print(centroids)
+    print("-----")
     # st = Sorts()
-    # arr = [7, 2, 1, 3, 11, 2, 10, 4, 5, 19]
+    print(arr1)
+    print("-----")
+
+    arr1[:,0]=np.log2(arr1[:,0])
+
+    print(arr1)
     # st.quick(arr)
     # print(arr)
