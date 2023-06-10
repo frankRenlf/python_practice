@@ -28,7 +28,7 @@ if __name__ == '__main__':
     print(arr1)
     print("-----")
 
-    arr1[:,0]=np.log2(arr1[:,0])
+    arr1[:, 0] = np.log2(arr1[:, 0])
 
     print(arr1)
     # st.quick(arr)
