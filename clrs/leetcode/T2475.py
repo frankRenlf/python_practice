@@ -18,9 +18,9 @@ class Solution:
         res = 0
         n = len(nums)
         t = 0
-        for _, v in count.items():
-            res += t * v * (n - t - v)
-            t += v
+        for el, val in count.items():
+            res += t * val * (n - t - val)
+            t += val
         return res
 
 
