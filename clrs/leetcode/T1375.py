@@ -19,3 +19,8 @@ class Solution:
             if right == i + 1:
                 ans += 1
         return ans
+
+
+if __name__ == '__main__':
+    sol = Solution()
+    print(sol.numTimesAllBlue([4, 4, 2, 4, 3]))
