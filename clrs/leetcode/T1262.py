@@ -8,15 +8,17 @@
     @github : https://github.com/frankRenlf
     @Description : medium
 """
+import sys
 from typing import List
 
 
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
-        f = [0, -float("inf"), -float("inf")]
-        for num in nums:
-            g = f[:]
-            for i in range(3):
-                g[(i + num % 3) % 3] = max(g[(i + num % 3) % 3], f[i] + num)
-            f = g
-        return f[0]
+        n = len(nums)
+        f = [[-sys.maxsize] * 3 for _ in range(n + 1)]
+        f[0][0] = 0
+        for i, x in enumerate(nums, 1):
+            for j in range(3):
+                f[i][j] = max(f[i - 1][j], f[i - 1][(j - x) % 3] + x)
+        return f[n][0]
+
