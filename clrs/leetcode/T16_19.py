@@ -25,7 +25,7 @@ class Solution:
                     self.cnt = 0
         return sorted(ret)
 
-    def check(self, land, i, j, m, n):
+    def check(self, land, i, j, m, n): 
         return not (i < 0 or i >= m or j < 0 or j >= n or land[i][j] > 0)
 
     def countArea(self, land, i, j, m, n):
