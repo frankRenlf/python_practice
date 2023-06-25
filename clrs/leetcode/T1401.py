@@ -23,4 +23,4 @@ class Solution:
 
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.checkOverlap(radius=1, xCenter=0, yCenter=0, x1=1, y1=-1, x2=3, y2=1))
+    print(sol.checkOverlap(radius=1, xCenter=1, yCenter=1, x1=1, y1=-3, x2=2, y2=-1))
