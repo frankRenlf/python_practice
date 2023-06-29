@@ -13,3 +13,8 @@ from typing import List
 
 class Solution:
     def reconstructMatrix(self, upper: int, lower: int, colsum: List[int]) -> List[List[int]]:
+        l0 = 0
+        l1 = 0
+        n = len(colsum)
+        res = [2][n]
+        
