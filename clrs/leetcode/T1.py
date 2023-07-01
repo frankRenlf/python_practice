@@ -13,3 +13,9 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        tab = {}
+        for i, val in enumerate(nums):
+            if target - val in tab:
+                return [tab[target - val], i]
+            tab[val] = i
+        return []
