@@ -8,6 +8,7 @@
     @github : https://github.com/frankRenlf
     @Description : medium
 """
+
 from clrs.leetcode.utils.ListNode import ListNode
 
 
