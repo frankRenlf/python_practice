@@ -8,6 +8,8 @@
     @github : https://github.com/frankRenlf
     @Description : medium
 """
+from typing import List
+
 
 class Solution:
     def matrixSum(self, nums: List[List[int]]) -> int:
