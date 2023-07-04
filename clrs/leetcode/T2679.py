@@ -14,8 +14,7 @@ from typing import List
 class Solution:
     def matrixSum(self, nums: List[List[int]]) -> int:
         res = 0
-        m = len(nums)
-        n = len(nums[0])
+        m, n = len(nums), len(nums[0])
         for i in range(m):
             nums[i].sort()
         for j in range(n):
