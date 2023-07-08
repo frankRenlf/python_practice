@@ -22,16 +22,14 @@ class Solution:
         return [-1, -1]
 
     def twoSum2(self, numbers: List[int], target: int) -> List[int]:
-        n = len(numbers)
-        res = [0, n - 1]
-        while res[0] < res[1]:
-            sum_val = numbers[res[0]] + numbers[res[1]]
-            if sum_val < target:
-                res[0] += 1
-            elif sum_val == target:
-                res[0] += 1
-                res[1] += 1
-                return res
+        low, high = 0, len(numbers) - 1
+        while low < high:
+            total = numbers[low] + numbers[high]
+            if total == target:
+                return [low + 1, high + 1]
+            elif total < target:
+                low += 1
             else:
-                res[1] -= 1
-        return res
+                high -= 1
+
+        return [-1, -1]
