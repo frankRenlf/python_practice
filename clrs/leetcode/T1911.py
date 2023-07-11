@@ -8,6 +8,7 @@
     @github : https://github.com/frankRenlf
     @Description : 
 """
+from typing import List
 
 
 class Solution:
