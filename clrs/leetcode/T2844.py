@@ -12,13 +12,8 @@
 
 class Solution:
     def alternateDigitSum(self, n: int) -> int:
-        sum_val = 0
-        k = 0
-        while n != 0:
-            if k % 2 == 0:
-                sum_val += n % 10
-            else:
-                sum_val -= n % 10
-            k += 1
+        res = 0
+        while n > 0:
+            res = n % 10 - res
             n //= 10
-        return sum_val if k % 2 != 0 else -sum_val
+        return res
