@@ -20,7 +20,7 @@ class Solution:
             p2 = int(num2[n2]) if n2 >= 0 else 0
             sum_val = p1 + p2 + carry
             res = str(sum_val % 10) + res
-            carry = sum_val / 10
+            carry = sum_val // 10
             n1 -= 1
             n2 -= 1
         return res
