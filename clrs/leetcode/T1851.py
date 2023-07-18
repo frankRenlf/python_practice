@@ -8,6 +8,7 @@
     @github : https://github.com/frankRenlf
     @Description : hard
 """
+
 from heapq import heappush, heappop
 from typing import List
 
