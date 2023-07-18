@@ -16,7 +16,7 @@ class Solution:
     def minInterval(self, intervals: List[List[int]], queries: List[int]) -> List[int]:
         n, m = len(intervals), len(queries)
         intervals.sort()
-        queries = sorted((x, i) for i, x in enumerate(queries))
+        queries = sorted([x, i] for i, x in enumerate(queries))
         ans = [-1] * m
         pq = []
         i = 0
@@ -30,3 +30,14 @@ class Solution:
             if pq:
                 ans[j] = pq[0][0]
         return ans
+
+
+if __name__ == "__main__":
+    queries = [1, 2, 3]
+    arr = [[x, i] for i, x in enumerate(queries)]
+    brr = sorted([x, i] for i, x in enumerate(queries))
+    crr = sorted((x, i) for i, x in enumerate(queries))
+    drr = ([x, i] for i, x in enumerate(queries))
+    print(arr, type(arr))
+    print(brr, type(brr))
+    print(crr, type(crr))
