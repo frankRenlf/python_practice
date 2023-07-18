@@ -8,7 +8,6 @@
     @github : https://github.com/frankRenlf
     @Description : hard
 """
-
 from heapq import heappush, heappop
 from typing import List
 
@@ -42,3 +41,4 @@ if __name__ == "__main__":
     print(arr, type(arr))
     print(brr, type(brr))
     print(crr, type(crr))
+    print(drr, type(drr))
