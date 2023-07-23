@@ -17,6 +17,8 @@ class Solution:
 
 
 if __name__ == "__main__":
-    s = "abcd"
-    d = s.split(num=4)
-    a = 1
+    s = "ab"
+    jewelsSet = set(s)
+    stones = "abcdef"
+    for s in stones:
+        print(s in jewelsSet)
