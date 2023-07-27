@@ -13,5 +13,6 @@ from typing import List
 
 class Solution:
     def deleteGreatestValue(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        
+        for row in grid:
+            row.sort()
+        return sum((max(v) for v in zip(*grid)))
