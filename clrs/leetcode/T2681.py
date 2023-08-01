@@ -14,11 +14,12 @@ from typing import List
 class Solution:
     def sumOfPower(self, nums: List[int]) -> int:
         nums.sort()
-        dp = [0 for i in range(len(nums))]
-        pre_sum = [0 for i in range(len(nums) + 1)]
+        n = len(nums)
+        dp = [0] * n
+        pre_sum = 0
         res, mod = 0, 10 ** 9 + 7
-        for i in range(len(nums)):
-            dp[i] = (nums[i] + pre_sum[i]) % mod
-            pre_sum[i + 1] = (pre_sum[i] + nums[i] + pre_sum[i]) % mod
-            res = (res + nums[i] * nums[i] * (nums[i] + pre_sum[i]) % mod) % mod
+        for i in range(n):
+            dp[i] = (nums[i] + pre_sum) % mod
+            pre_sum = (pre_sum + dp[i]) % mod
+            res = (res + nums[i] * nums[i] * dp[i]) % mod
         return res
