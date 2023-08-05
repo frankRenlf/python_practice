@@ -6,7 +6,7 @@
     @createTime : 2023/8/5 10:34 
     @Email : sc19lr@leeds.ac.uk
     @github : https://github.com/frankRenlf
-    @Description : 
+    @Description : easy
 """
 from typing import Optional
 
