@@ -8,19 +8,29 @@
     @github : https://github.com/frankRenlf
     @Description : hard
 """
+import sys
 from typing import List
 
 
 class Solution:
     def minFallingPathSum(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
-        dp = [[0 for _ in range(n)] for i in range(m)]
+        dp = [[sys.maxsize for _ in range(n)] for i in range(m)]
         dp[0][:] = grid[0]
+        for i in range(1, n):
+            for j in range(m):
+                left = sys.maxsize
+                right = sys.maxsize
+                if j < m - 1:
+                    left = min(dp[i - 1][j + 1:n])
+                if j > 0:
+                    right = min(dp[i - 1][0:j])
+                dp[i][j] = min(left, right)
+                dp[i][j] += grid[i][j]
+        return min(dp[n - 1][0:m])
 
 
 if __name__ == "__main__":
     sol = Solution()
-    dp = [[0 for _ in range(2)] for i in range(3)]
-    grid = [1, 2]
-    dp[0][:] = grid
-    print(1)
+    grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(sol.minFallingPathSum(grid))
