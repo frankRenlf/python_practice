@@ -13,7 +13,7 @@ from typing import List, Optional
 
 from clrs.leetcode.utils.ListNode import ListNode
 
-ListNode.__lt__ = lambda a, b: a.val < b.val  # 让堆可以比较节点大小
+ListNode.__lt__ = lambda x, y: x.val < y.val  # 让堆可以比较节点大小
 
 
 class Solution:
