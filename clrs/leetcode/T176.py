@@ -12,11 +12,15 @@ import pandas as pd
 
 
 def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
-    data = employee.loc[1:, 'salary']
-    val = None
-    if len(data) > 1:
-        val = sorted(data, reverse=True)
-    return pd.DataFrame({'SecondHighestSalary': [val[1]]})
+    # 去除重复的薪水值，并按薪水值降序排列
+    unique_salaries = employee['salary'].drop_duplicates().sort_values(ascending=False)
+    # 如果只有一个薪水值，或者没有薪水值，结果为 null，否则取第二个薪水值
+    if len(unique_salaries) <= 1:
+        result = None
+    else:
+        result = unique_salaries.iloc[1]
+    # 创建包含结果的 DataFrame
+    return pd.DataFrame({'SecondHighestSalary': [result]})
 
 
 if __name__ == "__main__":
