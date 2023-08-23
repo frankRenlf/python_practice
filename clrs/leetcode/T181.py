@@ -15,7 +15,22 @@ import pandas as pd
 def find_employees(employee: pd.DataFrame) -> pd.DataFrame:
     result = employee.merge(employee, left_on='managerId', right_on='id', suffixes=('', '_manager'))
     result_filtered = result[result['salary'] > result['salary_manager']]
-    result_filtered['Employee'] = result_filtered['name']
+    result_filtered.loc[:, ('Employee')] = result_filtered['name']
 
     return result_filtered[['Employee']]
-# if __name__ == "__main__":
+
+
+def find_employees2(employee: pd.DataFrame) -> pd.DataFrame:
+    df = employee.merge(employee[['id', 'salary']], how='left', left_on='managerId', right_on='id')
+    return df.loc[df['salary_x'] > df['salary_y'], ['name']].rename(columns={'name': 'Employee'})
+
+
+if __name__ == "__main__":
+    # Test
+    data = {'id': [1, 2, 3, 4],
+            'name': ['Joe', 'Henry', 'Sam', 'Max'],
+            'salary': [70000, 80000, 60000, 90000],
+            'managerId': [3, 4, None, None]}
+    employee_df = pd.DataFrame(data)
+    output = find_employees2(employee_df)
+    print(output)
