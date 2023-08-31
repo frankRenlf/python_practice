@@ -33,6 +33,12 @@ class Solution:
                 vis.add((e - b, 1))
         return -1
 
+    # def minimumJumps2(self, forbidden: List[int], a: int, b: int, x: int) -> int:
+    #     vis = set()
+    #     s = set(forbidden)
+    #
+    #     def recall(visit, a, b, x, i, s, w):
+
 
 if __name__ == "__main__":
     sol = Solution()
