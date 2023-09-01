@@ -31,6 +31,17 @@ class Solution:
         return cnt
 
 
+class Solution2:
+    def captureForts(self, forts: List[int]) -> int:
+        ans, pre = 0, -1
+        for i, fort in enumerate(forts):
+            if fort == -1 or fort == 1:
+                if pre >= 0 and fort != forts[pre]:
+                    ans = max(ans, i - pre - 1)
+                pre = i
+        return ans
+
+
 if __name__ == "__main__":
     sol = Solution()
     print(sol.captureForts([1, 0, 0, -1, 1, 0, 0, 0, 1]))
