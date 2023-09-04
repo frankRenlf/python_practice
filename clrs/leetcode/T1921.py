@@ -13,5 +13,15 @@ from typing import List
 
 class Solution:
     def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
-        
-# if __name__ == "__main__":
+        n = len(dist)
+        ans = [dist[i] / speed[i] for i in range(n)]
+        ans.sort()
+        i = 0
+        while i < n and i < ans[i]:
+            i += 1
+        return i
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.eliminateMaximum(dist=[1, 1, 2, 3], speed=[1, 1.9, 1, 1]))
