@@ -22,3 +22,4 @@ class Solution:
             dp_i_1 = max(pre_i_1, pre_i_0 - prices[i])
         return dp_i_0
 # if __name__ == "__main__":
+# Compare this snippet from clrs/leetcode/T122.py:
