@@ -9,7 +9,6 @@
     @Description : medium
 """
 import sys
-from bisect import bisect_right
 
 
 class StockSpanner:
