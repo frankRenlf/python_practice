@@ -25,4 +25,7 @@ class Solution_best:
             a = ~b & (a ^ num)
         return b
 
-# if __name__ == "__main__":
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.singleNumber([0, 1, 0, 1, 0, 1, 99]))
