@@ -27,7 +27,16 @@ class Solution:
             sub += value - residue
         return total - sub
 
+    def pickGifts2(self, gifts: List[int], k: int) -> int:
+        q = [-gift for gift in gifts]
+        heapq.heapify(q)
+        while k:
+            x = heapq.heappop(q)
+            heapq.heappush(q, -int(math.sqrt(-x)))
+            k -= 1
+        return -sum(q)
+
 
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.pickGifts(gifts = [1,1,1,1], k = 4))
+    print(sol.pickGifts(gifts=[1, 1, 1, 1], k=4))
