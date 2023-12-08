@@ -13,7 +13,7 @@ from typing import List
 
 
 class Solution:
-    def maxTaxiEarnings(self, n: int, rides: List[List[int]]) -> int:
+    def maxTaxiEarnings_best(self, n: int, rides: List[List[int]]) -> int:
         rides.sort(key=lambda x: x[1])
         cnt = len(rides)
         dp = [0] * (n + 1)
