@@ -25,7 +25,7 @@ class Solution:
                     mx = max(mx, (dp[rides[index][0]] + rides[index][1]
                                   - rides[index][0] + rides[index][2]))
                     index += 1
-                dp[i] += mx
+                dp[i] = max(dp[i - 1], mx)
             else:
                 dp[i] = dp[i - 1]
         return dp[n]
