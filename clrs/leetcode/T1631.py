@@ -39,4 +39,4 @@ class Solution:
 
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.minimumEffortPath([[1, 2, 2], [3, 8, 2], [5, 3, 5]]))
+    print(sol.minimumEffortPath([[1, 6, 7], [2, 5, 8], [3, 4, 9]]))
