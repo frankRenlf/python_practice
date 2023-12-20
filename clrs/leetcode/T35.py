@@ -3,7 +3,7 @@
     @Author : Frank.Ren
     @Project : python_practice 
     @Product : PyCharm
-    @createTime : 2023/12/20 16:40 
+    @createTime : 2023/12/20 16:48 
     @Email : e1143935@u.nus.edu
     @github : https://github.com/frankRenlf
     @Description : easy
@@ -12,7 +12,7 @@ from typing import List
 
 
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    def searchInsert(self, nums: List[int], target: int) -> int:
         left = 0
         right = len(nums) - 1
         while left < right:
@@ -21,9 +21,5 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid
-        return left if nums[left] == target else -1
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print(sol.search([-1, 0, 3, 5, 9, 12], 9))
+        return left if nums[left] >= target else left + 1
+# if __name__ == "__main__":
