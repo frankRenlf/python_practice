@@ -40,7 +40,7 @@ class Solution:
 if __name__ == "__main__":
     import bisect
 
-    sorted_list = [1, 2, ]
+    sorted_list = [1, 2,4]
     new_element = 3
 
     # 使用 bisect_left 找到插入新元素的位置
