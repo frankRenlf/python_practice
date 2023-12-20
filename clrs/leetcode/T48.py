@@ -23,4 +23,12 @@ class Solution:
             for j in range(i):
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
+    # def rotate2(self, matrix: List[List[int]]) -> None:
+    #     n = len(matrix)
+    #     # 水平翻转
+    #     tmp = [0]*n
+    #     for i in range(n):
+    #         for j in range(n):
+
+
 # if __name__ == "__main__":
