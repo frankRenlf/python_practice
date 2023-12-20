@@ -35,4 +35,16 @@ class Solution:
             else:
                 left = mid
         return [l, right]
-# if __name__ == "__main__":
+
+
+if __name__ == "__main__":
+    import bisect
+
+    sorted_list = [1, 2, ]
+    new_element = 3
+
+    # 使用 bisect_left 找到插入新元素的位置
+    position = bisect.bisect_left(sorted_list, new_element)
+    position2 = bisect.bisect_right(sorted_list, new_element)
+
+    print(position, position2)  # 输出应该插入新元素的索引
