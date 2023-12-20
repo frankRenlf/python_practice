@@ -53,4 +53,17 @@ class Solution2:
 
         return False
 
-# if __name__ == "__main__":
+
+if __name__ == "__main__":
+    arr = [1, 2, 2, 3, 3, 4]
+    target =0
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] <= target:
+            left = mid + 1
+        else:
+            right = mid
+
+    print(left)
