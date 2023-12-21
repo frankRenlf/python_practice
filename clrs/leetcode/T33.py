@@ -14,11 +14,11 @@ from typing import List
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         if not nums:
-            return False
+            return -1
 
         n = len(nums)
         if n == 1:
-            return nums[0] == target
+            return 0 if nums[0] == target else -1
 
         l, r = 0, n - 1
         while l <= r:
