@@ -26,3 +26,6 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     print(sol.findMin([3, 4, 5, 1, 2]))
+    import sys
+    # sys模块提供了一系列有关Python运行环境的变量和函数。
+    print(sys.version)
