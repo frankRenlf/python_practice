@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect x="0" y="0" width="200" height="200" fill="#87CEEB"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#fff" stroke-width="10"/>
+  <path d="M100,30 L70,70 L130,70z" fill="#fff"/>
+  <path d="M100,170 L130,130 L70,130z" fill="#fff"/>
+  <path d="M30,100 L70,70 L70,130z" fill="#fff"/>
+  <path d="M170,100 L130,130 L130,70z" fill="#fff"/>
+  <path d="M53,76 L87,76 L78,91z" fill="#fff"/>
+  <path d="M147,76 L136,91 L170,76z" fill="#fff"/>
+  <path d="M76,147 L91,136 L76,170z" fill="#fff"/>
+  <path d="M124,147 L124,170 L139,136z" fill="#fff"/>
+  <path d="M74,38 L130,38 L108,57z" fill="#fff"/>
+  <path d="M126,38 L92,38 L112,57z" fill="#fff"/>
+  <path d="M38,74 L57,108 L38,130z" fill="#fff"/>
+  <path d="M38,126 L57,92 L38,74z" fill="#fff"/>
+  <path d="M162,126 L143,92 L162,74z" fill="#fff"/>
+  <path d="M162,74 L143,108 L162,126z" fill="#fff"/>
+  <path d="M120,165 L92,165 L108,150z" fill="#fff"/>
+  <path d="M80,165 L68,150 L108,165z" fill="#fff"/>
+  <path d="M68,50 L108,50 L92,65z" fill="#fff"/>
+  <path d="M132,50 L120,65 L108,50z" fill="#fff"/>
+  <path d="M41,118 L60,100 L41,82z" fill="#fff"/>
+  <path d="M159,118 L140,100 L159,82z" fill="#fff"/>
+  <path d="M82,159 L100,140 L118,159z" fill="#fff"/>
+  <path d="M118,41 L100,60 L82,41z" fill="#fff"/>
+  <path d="M50,68 L50,132 L65,120z" fill="#fff"/>
+  <path d="M150,68 L150,132 L135,120z" fill="#fff"/>
+  <path d="M68,150 L132,150 L120,135z" fill="#fff"/>
+  <path d="M68,50 L132,50 L120,65z" fill="#fff"/>
+  <path d="M60,41 L143,41 L100,74z" fill="#fff"/>
+  <path d="M140,159 L57,159 L100,126z" fill="#fff"/>
+  <path d="M41,60 L41,143 L74,100z" fill="#fff"/>
+  <path d="M159,140 L159,57 L126,100z" fill="#fff"/>
+  <path d="M63,113 L80,96 L97,113z" fill="#fff"/>
+  <path d="M103,87 L120,104 L137,87z" fill="#fff"/>
+  <path d="M87,103 L104,120 L87,137z" fill="#fff"/>
+  <path d="M113,63 L96,80 L113,97z" fill="#fff"/>
+  <path d="M50,100 L100,50 L150,100 L100,150z" fill="none" stroke="#fff" stroke-width="10"/>
+</svg>

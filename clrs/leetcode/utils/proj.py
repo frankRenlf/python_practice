@@ -83,5 +83,53 @@ def t47_1():
     plt.show()
 
 
+def t47_2():
+    # SVG creation for a simplified representation of the UN flag
+
+    # SVG Header
+    svg_header = """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <!-- Created with OpenAI (https://openai.com) -->
+    """
+
+    # SVG Content
+    svg_content = f"""<svg
+       width="315"
+       height="273"
+       viewBox="0 0 315 273"
+       version="1.1"
+       id="svg8"
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xml:space="preserve">
+      <rect
+         width="315"
+         height="273"
+         style="fill:#5b92e5"/>
+      <circle
+         cx="157.5"
+         cy="136.5"
+         r="65"
+         style="fill:#fff"/>
+      <path
+         d="M 157.5,71.5 "
+         style="fill:none;stroke:#fff;stroke-width:2"/>
+      <!-- Simplified olive branches would go here -->
+      <!-- World map simplified paths would go here -->
+    </svg>
+    """
+
+    # Combine the header and content
+    svg_code = svg_header + svg_content
+
+    # Since this is a very simplified version, the paths for olive branches and world map are omitted.
+    # Normally, you would include <path> elements with the "d" attribute defining the complex shapes.
+
+    # Saving the SVG code to a file
+    svg_filename = 'figure47_2.svg'
+    with open(svg_filename, 'w') as svg_file:
+        svg_file.write(svg_code)
+
+
 if __name__ == "__main__":
-    t47_0()
+    t47_2()
