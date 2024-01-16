@@ -24,7 +24,7 @@ def t47_0():
     y_huge = np.array([70, 90, 110, 140])
 
     # Plotting the curves
-    plt.figure(figsize=(6, 4))
+    plt.figure(figsize=(6, 6))
     plt.plot(x, y_base, 'b-*', label='Base')
     plt.plot(x, y_large, 'r-x', label='Large')
     plt.plot(x, y_huge, 'g-o', label='Huge')
@@ -69,8 +69,8 @@ def t47_1():
 
     # Add text on top of the bars
     for i in range(len(tasks)):
-        plt.text(r1[i], OSCaR_scores[i] + 3, f'{OSCaR_proportion[i]}%', ha='center', color='black')
-        plt.text(r2[i], MiniVLM_scores[i] + 3, f'{MiniVLM_proportion[i]}%', ha='center', color='black')
+        plt.text(r1[i], OSCaR_scores[i] + 1.5, f'{OSCaR_proportion[i]}%', ha='center', color='black')
+        plt.text(r2[i], MiniVLM_scores[i] + 1.5, f'{MiniVLM_proportion[i]}%', ha='center', color='black')
 
     # Add xticks on the middle of the group bars
     plt.xlabel('Tasks', fontweight='bold')
@@ -83,7 +83,7 @@ def t47_1():
     plt.show()
 
 
-def t47_2():
+def t47_3():
     # SVG creation for a simplified representation of the UN flag
 
     # SVG Header
@@ -131,5 +131,38 @@ def t47_2():
         svg_file.write(svg_code)
 
 
+def t47_2():
+    return """\begin{document}
+\begin{tikzpicture}
+    % Body
+    \draw [fill=pink] (0,0) ellipse (3cm and 2cm);
+    
+    % Head
+    \draw [fill=pink] (2.5,0.5) circle (1cm);
+
+    % Eyes
+    \draw [fill=white] (2.7,0.7) circle (0.2cm);
+    \draw [fill=black] (2.7,0.7) circle (0.1cm);
+    
+    % Nose
+    \draw [fill=pink] (3,0.3) ellipse (0.3cm and 0.2cm);
+    \draw (2.9,0.3) -- (3.1,0.3);
+    
+    % Ears
+    \draw [fill=pink] (2.2,1.2) ellipse (0.5cm and 0.3cm);
+    \draw [fill=pink] (3,1.5) ellipse (0.5cm and 0.3cm);
+    
+    % Legs
+    \draw [fill=pink] (-1.5,-1.5) circle (0.5cm);
+    \draw [fill=pink] (-0.5,-1.7) circle (0.5cm);
+    \draw [fill=pink] (0.5,-1.7) circle (0.5cm);
+    \draw [fill=pink] (1.5,-1.5) circle (0.5cm);
+    
+    % Tail
+    \draw [pink, thick] (1,-1) to [out=90,in=180] (1.5,-0.5) to [out=0,in=180] (2,-1);
+\end{tikzpicture}
+\end{document}"""
+
+
 if __name__ == "__main__":
-    t47_2()
+    t47_0()
