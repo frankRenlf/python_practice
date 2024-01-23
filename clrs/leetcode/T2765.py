@@ -27,4 +27,19 @@ class Solution:
                     firstIndex = i
         return res
 
+    def alternatingSubarray_dp(self, nums: List[int]) -> int:
+        n = len(nums)
+        dp = [1] * n
+        cur = 1
+        for i in range(1, n):
+            if nums[i] - nums[i - 1] == cur:
+                dp[i] = dp[i - 1] + 1
+                cur *= -1
+            elif nums[i] - nums[i - 1] == 1:
+                dp[i] = 2
+                cur = -1
+            else:
+                cur = 1
+        res = max(dp)
+        return -1 if res <= 1 else res
 # if __name__ == "__main__":
