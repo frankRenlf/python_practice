@@ -8,6 +8,7 @@
     @github : https://github.com/frankRenlf
     @Description : medium
 """
+import math
 
 
 class Solution:
@@ -34,4 +35,12 @@ class Solution:
             # 把 Y 壶的水灌进 X 壶，直至灌满或倒空。
             stack.append((remain_x + min(remain_y, x - remain_x), remain_y - min(remain_y, x - remain_x)))
         return False
+
+    def canMeasureWater_math(self, x: int, y: int, z: int) -> bool:
+        if x + y < z:
+            return False
+        if x == 0 or y == 0:
+            return z == 0 or x + y == z
+        return z % math.gcd(x, y) == 0
+
 # if __name__ == "__main__":
