@@ -29,4 +29,5 @@ class Solution:
                     q.append(node.right)
                 l -= 1
             ans.append(cur)
+        ans.reverse()
         return ans
