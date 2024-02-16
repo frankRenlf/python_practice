@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 from typing import Optional
-from utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 from collections import deque
 
 

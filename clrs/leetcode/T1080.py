@@ -10,17 +10,19 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 class Solution:
-    def sufficientSubset(self, root: Optional[TreeNode], limit: int) -> Optional[TreeNode]:
+    def sufficientSubset(
+        self, root: Optional[TreeNode], limit: int
+    ) -> Optional[TreeNode]:
         res = self.dfs(root, 0, limit)
         return root if res >= limit else None
 
     def dfs(self, node, pre, limit):
         if node is None:
-            return -float('inf')
+            return -float("inf")
         if node.left is None and node.right is None:
             return node.val + pre
         cur = pre + node.val
@@ -33,7 +35,9 @@ class Solution:
         res = max(left_sum, right_sum)
         return res
 
-    def sufficientSubset2(self, root: Optional[TreeNode], limit: int) -> Optional[TreeNode]:
+    def sufficientSubset2(
+        self, root: Optional[TreeNode], limit: int
+    ) -> Optional[TreeNode]:
         res = self.dfs(root, 0, limit)
         return root if res else None
 

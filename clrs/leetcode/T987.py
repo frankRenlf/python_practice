@@ -1,5 +1,5 @@
 from typing import List
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 class Solution:

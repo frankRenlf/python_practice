@@ -10,7 +10,7 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 # Definition for a binary tree node.
@@ -20,7 +20,9 @@ from clrs.leetcode.utils.TreeNode import TreeNode
 #         self.left = left
 #         self.right = right
 class Solution:
-    def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
+    def mergeTrees(
+        self, root1: Optional[TreeNode], root2: Optional[TreeNode]
+    ) -> Optional[TreeNode]:
         if root1 is None:
             return root2
         if root2 is None:

@@ -8,7 +8,7 @@
     @github : https://github.com/frankRenlf
     @Description : medium
 """
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 # Definition for a binary tree node.

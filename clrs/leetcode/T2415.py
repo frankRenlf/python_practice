@@ -11,7 +11,7 @@
 import queue
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode, create_perfect_binary_tree
+from clrs.leetcode.utils.Node import TreeNode, create_perfect_binary_tree
 from queue import Queue
 
 

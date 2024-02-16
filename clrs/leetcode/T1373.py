@@ -8,7 +8,7 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 class SubTree:
@@ -20,7 +20,7 @@ class SubTree:
 
 
 class Solution:
-    INF = 0x3f3f3f3f
+    INF = 0x3F3F3F3F
 
     def __init__(self):
         self.res = 0
@@ -37,5 +37,10 @@ class Solution:
         if left.is_bst and right.is_bst and left.max_val < root.val < right.min_val:
             cur_sum_val = root.val + left.sum_val + right.sum_val
             self.res = max(self.res, cur_sum_val)
-            return SubTree(True, min(root.val, left.min_val), max(root.val, right.max_val), cur_sum_val)
+            return SubTree(
+                True,
+                min(root.val, left.min_val),
+                max(root.val, right.max_val),
+                cur_sum_val,
+            )
         return SubTree(False, 0, 0, 0)

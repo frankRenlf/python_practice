@@ -10,7 +10,7 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 class Solution:
@@ -37,5 +37,6 @@ class Solution:
             if value % 2 == 1:
                 odd += 1
         return odd <= 1
+
 
 # if __name__ == "__main__":

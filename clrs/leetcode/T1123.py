@@ -10,7 +10,7 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 # Definition for a binary tree node.
@@ -35,5 +35,6 @@ class Solution:
             return d1 + 1, root
 
         return f(root)[1]
+
 
 # if __name__ == "__main__":

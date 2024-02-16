@@ -10,7 +10,7 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.TreeNode import TreeNode
+from clrs.leetcode.utils.Node import TreeNode
 
 
 class Solution:
@@ -26,4 +26,6 @@ class Solution:
         selected = root.val + l[1] + r[1]
         not_selected = max(l) + max(r)
         return [selected, not_selected]
+
+
 # if __name__ == "__main__":
