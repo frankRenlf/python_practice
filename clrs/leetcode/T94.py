@@ -6,7 +6,7 @@
 #         self.right = right
 from typing import Optional, List
 
-from clrs.leetcode.utils.Node import TreeNode
+from clrs.leetcode.utils.nodes import TreeNode
 
 
 class Solution:

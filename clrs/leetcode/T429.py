@@ -1,7 +1,7 @@
 from collections import deque
 from typing import List
 
-from clrs.leetcode.utils.Node import Node
+from clrs.leetcode.utils.nodes import Node
 
 
 class Solution:

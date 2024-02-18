@@ -8,7 +8,7 @@
     @github : https://github.com/frankRenlf
     @Description : medium
 """
-from clrs.leetcode.utils.Node import TreeNode
+from clrs.leetcode.utils.nodes import TreeNode
 
 
 # Definition for a binary tree node.
@@ -44,3 +44,32 @@ if __name__ == "__main__":
     sol = Solution()
     sol.bstToGst(root0)
     print(root0)
+
+
+c = {
+    "id": "chatcmpl-8t57NE0JFw9CTVBCqCXLMTIbnkMyV",
+    "object": "chat.completion",
+    "created": 1708138405,
+    "model": "gpt-4",
+    "prompt_filter_results": [
+        {
+            "prompt_index": 0,
+            "content_filter_results": {
+                "hate": {"filtered": False, "severity": "safe"},
+                "self_harm": {"filtered": False, "severity": "safe"},
+                "sexual": {"filtered": False, "severity": "safe"},
+                "violence": {"filtered": False, "severity": "safe"},
+            },
+        }
+    ],
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {"role": "assistant"},
+            "content_filter_results": {},
+        }
+    ],
+    "usage": {"prompt_tokens": 4234, "completion_tokens": 0, "total_tokens": 4234},
+    "system_fingerprint": "fp_68a7d165bf",
+}

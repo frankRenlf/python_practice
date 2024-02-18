@@ -10,7 +10,7 @@
 """
 from typing import Optional
 
-from clrs.leetcode.utils.Node import TreeNode
+from clrs.leetcode.utils.nodes import TreeNode
 
 
 # if __name__ == "__main__":
