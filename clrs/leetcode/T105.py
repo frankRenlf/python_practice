@@ -1,5 +1,11 @@
+from typing import List
+
+from clrs.leetcode.utils.nodes import TreeNode
+
+
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+
         def myBuildTree(
             preorder_left: int,
             preorder_right: int,
