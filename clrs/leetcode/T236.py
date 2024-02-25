@@ -10,15 +10,23 @@ from clrs.leetcode.utils.nodes import TreeNode
 
 
 class Solution:
+    def __init__(self) -> None:
+        self.ans = None
+
     def lowestCommonAncestor(
         self, root: "TreeNode", p: "TreeNode", q: "TreeNode"
     ) -> "TreeNode":
-        if root == None or root == p or root == q:
-            return root
-        left = self.lowestCommonAncestor(root.left, p, q)
-        right = self.lowestCommonAncestor(root.right, p, q)
-        if left == None:
-            return right
-        if right == None:
-            return left
-        return root
+
+        def dfs(node):
+            if node == None:
+                return False
+            lson = dfs(node.left)
+            rson = dfs(node.right)
+            if (lson and rson) or (
+                (node.val == p.val or node.val == q.val) and (lson or rson)
+            ):
+                self.ans = node
+            return lson or rson or (node.val == p.val or node.val == q.val)
+
+        dfs(root)
+        return self.ans
