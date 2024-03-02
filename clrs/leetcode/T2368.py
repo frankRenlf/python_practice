@@ -5,7 +5,7 @@ class Solution:
     def reachableNodes(
         self, n: int, edges: List[List[int]], restricted: List[int]
     ) -> int:
-        is_restricted = [1] * n
+        is_restricted = [0] * n
         for x in restricted:
             is_restricted[x] = 1
         g = [[] for _ in range(n)]
