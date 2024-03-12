@@ -18,12 +18,11 @@ class FindElements:
         def dfs(node):
             if node is None:
                 return
+            self.elements.add(node.val)
             if node.left:
                 node.left.val = node.val * 2 + 1
-                self.elements.add(node.left.val)
             if node.right:
                 node.right.val = node.val * 2 + 2
-                self.elements.add(node.right.val)
             dfs(node.left)
             dfs(node.right)
 
