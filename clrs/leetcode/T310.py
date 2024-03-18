@@ -74,5 +74,22 @@ class Solution:
 
 
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.findMinHeightTrees(n=4, edges=[[1, 0], [1, 2], [1, 3]]))
+    elements = [
+        "text",
+        "[<IMG_PLH>]",
+        "text",
+        "[<IMG_PLH>]",
+        "text",
+        "[<IMG_PLH>]",
+        "[<IMG_PLH>]",
+    ]
+
+    # Function to move specific elements one position ahead and concatenate into a string
+    def process_list(lst):
+        for i in range(len(lst)):
+            if lst[i] == "[<IMG_PLH>]" and i > 0:
+                # Swap with the previous element
+                lst[i - 1], lst[i] = lst[i], lst[i - 1]
+
+    process_list(elements)
+    print("".join(elements))
