@@ -1,19 +1,23 @@
+from collections import Counter
+
+
 class FrequencyTracker:
 
     def __init__(self):
-        self.mp = {}
-        self.feq = {}
+        self.mp = Counter()
+        self.feq = Counter()
 
     def add(self, number: int) -> None:
-        self.mp[number] = self.mp.get(number, 0) + 1
+        self.feq[self.mp[number]] -= 1
+        self.mp[number] += 1
+        self.feq[self.mp[number]] += 1
 
     def deleteOne(self, number: int) -> None:
-        self.mp[number] = (
-            self.mp.get(number, 0) - 1 if self.mp.get(number, 0) > 0 else 0
-        )
+        if self.mp[number] == 0:
+            return
+        self.feq[self.mp[number]] -= 1
+        self.mp[number] -= 1
+        self.feq[self.mp[number]] += 1
 
     def hasFrequency(self, frequency: int) -> bool:
-        for k, v in self.mp.items():
-            if v == frequency:
-                return True
-        return False
+        return self.feq[frequency] > 0
